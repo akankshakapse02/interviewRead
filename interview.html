@@ -63,7 +63,7 @@
     document.getElementById("clearBtn").onclick = () => answer.value = "";
     document.getElementById("nextBtn").onclick = () => {
       if (!answer.value.trim()) {
-        result.textContent = "Please enter an answer before continuing.";
+        result.textContent = "Please enter a short answer before continuing.";
         result.classList.remove("hidden");
         return;
       }
