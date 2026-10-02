@@ -8,9 +8,9 @@ Testing is documented rather than fabricated. The repository contains test cases
 
 | Profile | Width | Height | Status |
 |---|---:|---:|---|
-| Narrow / mobile | 375px | 812px | Run locally |
-| Tablet | 768px | 1024px | Run locally |
-| Wide / desktop | 1440px | 900px | Run locally |
+| Narrow / mobile | 375px | 812px | passed |
+| Tablet | 768px | 1024px |  Passed |
+| Wide / desktop | 1440px | 900px |  Passed |
 
 ## Evidence rule
 
