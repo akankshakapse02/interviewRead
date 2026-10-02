@@ -70,4 +70,22 @@ This is a front-end prototype. The loading sequence is simulated locally and doe
 This project is a front-end AI interview assistant prototype.
 The interview loading process and questions are simulated locally.
 No external AI API or candidate evaluation service is connected.
+
+
+## Screenshots
+
+### Desktop Loading Page
+![Desktop Loading Page](docs/screenshots/desktop-loading.png)
+
+### Mobile Loading Page
+![Mobile Loading Page](docs/screenshots/mobile-loading.png)
+
+### Tablet Loading Page
+![Tablet Loading Page](docs/screenshots/tablet-loading.png)
+
+### Interview Page
+![Interview Page](docs/screenshots/interview-page.png)
+
+### Interview Completed
+![Interview Completed](docs/screenshots/interview-completed.png)
 #null 
