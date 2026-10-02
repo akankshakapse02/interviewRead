@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +26,7 @@
   </script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="min-h-screen bg-ink text-white antialiased">
   <main id="app" class="min-h-screen overflow-hidden">
     <section class="relative min-h-screen flex items-center justify-center px-4 py-8">
@@ -46,10 +48,12 @@
           </span>
         </header>
 
-        <div class="grid overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-glow backdrop-blur-xl lg:grid-cols-[1.15fr_.85fr]">
+        <div
+          class="grid overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-glow backdrop-blur-xl lg:grid-cols-[1.15fr_.85fr]">
           <div class="p-6 sm:p-10 lg:p-12">
             <div class="mb-8">
-              <span class="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 text-xs font-medium text-cyan-200">
+              <span
+                class="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 text-xs font-medium text-cyan-200">
                 <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-300"></span>
                 Preparing your session
               </span>
@@ -73,23 +77,30 @@
             </div>
 
             <div id="steps" class="space-y-3">
-              <div class="step" data-step="0"><span class="step-icon">1</span><span>Preparing interview workspace</span><span class="step-status">Waiting</span></div>
-              <div class="step" data-step="1"><span class="step-icon">2</span><span>Loading question categories</span><span class="step-status">Waiting</span></div>
-              <div class="step" data-step="2"><span class="step-icon">3</span><span>Checking response tools</span><span class="step-status">Waiting</span></div>
-              <div class="step" data-step="3"><span class="step-icon">4</span><span>Finalizing practice session</span><span class="step-status">Waiting</span></div>
+              <div class="step" data-step="0"><span class="step-icon">1</span><span>Preparing interview
+                  workspace</span><span class="step-status">Waiting</span></div>
+              <div class="step" data-step="1"><span class="step-icon">2</span><span>Loading question
+                  categories</span><span class="step-status">Waiting</span></div>
+              <div class="step" data-step="2"><span class="step-icon">3</span><span>Checking response tools</span><span
+                  class="step-status">Waiting</span></div>
+              <div class="step" data-step="3"><span class="step-icon">4</span><span>Finalizing practice
+                  session</span><span class="step-status">Waiting</span></div>
             </div>
 
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-              <button id="startBtn" disabled class="cta-btn flex-1 rounded-xl px-5 py-3.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-40">
+              <button id="startBtn" disabled
+                class="cta-btn flex-1 rounded-xl px-5 py-3.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-40">
                 Start Interview
               </button>
-              <button id="replayBtn" class="rounded-xl border border-white/10 bg-white/5 px-5 py-3.5 text-sm font-medium text-slate-200 transition hover:bg-white/10">
+              <button id="replayBtn"
+                class="rounded-xl border border-white/10 bg-white/5 px-5 py-3.5 text-sm font-medium text-slate-200 transition hover:bg-white/10">
                 Replay Loading
               </button>
             </div>
           </div>
 
-          <aside class="relative hidden min-h-[520px] items-center justify-center border-l border-white/10 bg-black/10 lg:flex">
+          <aside
+            class="relative hidden min-h-[520px] items-center justify-center border-l border-white/10 bg-black/10 lg:flex">
             <div class="ai-stage">
               <div class="ai-ring ring-a"></div>
               <div class="ai-ring ring-b"></div>
@@ -120,4 +131,5 @@
 
   <script src="assets/js/app.js"></script>
 </body>
+
 </html>
