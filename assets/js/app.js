@@ -9,7 +9,7 @@ let progress = 0;
 let timer = null;
 
 function setStepState() {
-  const completed = Math.floor(progress / 25);
+  const completed = Math.min(Math.floor(progress / 25), steps.length);
   steps.forEach((step, index) => {
     step.classList.toggle("active", index === completed && progress < 100);
     step.classList.toggle("done", index < completed || progress === 100);
