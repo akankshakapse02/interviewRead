@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Interview Assistant loading experience">
+  <title>AI Interview Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0b1020",
+            panel: "#11182b",
+            accent: "#7c5cff",
+            cyanx: "#22d3ee"
+          },
+          boxShadow: {
+            glow: "0 0 60px rgba(124,92,255,.22)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen bg-ink text-white antialiased">
+  <main id="app" class="min-h-screen overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center px-4 py-8">
+      <div class="absolute inset-0 bg-grid opacity-30"></div>
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+
+      <div class="relative z-10 w-full max-w-5xl">
+        <header class="mb-6 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="brand-mark">AI</div>
+            <div>
+              <p class="font-semibold tracking-wide">Interview Assistant</p>
+              <p class="text-xs text-slate-400">Practice • Prepare • Improve</p>
+            </div>
+          </div>
+          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
+            Candidate mode
+          </span>
+        </header>
+
+        <div class="grid overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-glow backdrop-blur-xl lg:grid-cols-[1.15fr_.85fr]">
+          <div class="p-6 sm:p-10 lg:p-12">
+            <div class="mb-8">
+              <span class="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 text-xs font-medium text-cyan-200">
+                <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-300"></span>
+                Preparing your session
+              </span>
+              <h1 class="mt-5 max-w-xl text-3xl font-bold leading-tight sm:text-5xl">
+                Your interview workspace is getting ready.
+              </h1>
+              <p class="mt-4 max-w-xl text-sm leading-6 text-slate-400 sm:text-base">
+                We are preparing the practice flow, question set, and response workspace.
+                This screen does not claim that an AI model has evaluated you yet.
+              </p>
+            </div>
+
+            <div class="mb-8">
+              <div class="mb-2 flex items-center justify-between text-sm">
+                <span class="text-slate-300">Loading session</span>
+                <span id="progressText" class="font-semibold text-white">0%</span>
+              </div>
+              <div class="h-2 overflow-hidden rounded-full bg-white/10">
+                <div id="progressBar" class="progress-bar h-full w-0 rounded-full"></div>
+              </div>
+            </div>
+
+            <div id="steps" class="space-y-3">
+              <div class="step" data-step="0"><span class="step-icon">1</span><span>Preparing interview workspace</span><span class="step-status">Waiting</span></div>
+              <div class="step" data-step="1"><span class="step-icon">2</span><span>Loading question categories</span><span class="step-status">Waiting</span></div>
+              <div class="step" data-step="2"><span class="step-icon">3</span><span>Checking response tools</span><span class="step-status">Waiting</span></div>
+              <div class="step" data-step="3"><span class="step-icon">4</span><span>Finalizing practice session</span><span class="step-status">Waiting</span></div>
+            </div>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <button id="startBtn" disabled class="cta-btn flex-1 rounded-xl px-5 py-3.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-40">
+                Start Interview
+              </button>
+              <button id="replayBtn" class="rounded-xl border border-white/10 bg-white/5 px-5 py-3.5 text-sm font-medium text-slate-200 transition hover:bg-white/10">
+                Replay Loading
+              </button>
+            </div>
+          </div>
+
+          <aside class="relative hidden min-h-[520px] items-center justify-center border-l border-white/10 bg-black/10 lg:flex">
+            <div class="ai-stage">
+              <div class="ai-ring ring-a"></div>
+              <div class="ai-ring ring-b"></div>
+              <div class="ai-ring ring-c"></div>
+              <div class="ai-core">
+                <div class="core-dot"></div>
+                <span>AI</span>
+              </div>
+              <div class="signal signal-a"></div>
+              <div class="signal signal-b"></div>
+              <div class="signal signal-c"></div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 w-64 -translate-x-1/2 text-center">
+              <p class="text-sm font-medium">Interview environment</p>
+              <p class="mt-1 text-xs leading-5 text-slate-500">
+                A focused workspace for practice questions and structured answers.
+              </p>
+            </div>
+          </aside>
+        </div>
+
+        <p id="message" class="mt-5 text-center text-xs text-slate-500">
+          Loading is simulated locally for this demo.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

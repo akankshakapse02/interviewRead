@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Workspace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen bg-ink text-white antialiased">
+  <main class="min-h-screen px-4 py-8">
+    <div class="mx-auto max-w-4xl">
+      <header class="flex items-center justify-between border-b border-white/10 pb-5">
+        <div>
+          <p class="text-xs uppercase tracking-[.25em] text-cyan-300">Interview workspace</p>
+          <h1 class="mt-2 text-2xl font-bold">Practice Interview</h1>
+        </div>
+        <a href="index.html" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-300 hover:bg-white/5">Exit</a>
+      </header>
+
+      <section class="mt-8 rounded-2xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
+        <div class="flex items-center justify-between">
+          <span id="questionCount" class="text-sm text-slate-400">Question 1 of 5</span>
+          <span class="rounded-full bg-cyan-300/10 px-3 py-1 text-xs text-cyan-200">Java Developer</span>
+        </div>
+
+        <h2 id="question" class="mt-7 text-2xl font-semibold leading-relaxed">
+          What is the difference between JDK, JRE, and JVM?
+        </h2>
+
+        <textarea id="answer" rows="7" class="mt-6 w-full rounded-xl border border-white/10 bg-black/20 p-4 text-sm outline-none placeholder:text-slate-600 focus:border-cyan-300/50" placeholder="Type your answer here..."></textarea>
+
+        <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-end">
+          <button id="clearBtn" class="rounded-xl border border-white/10 px-5 py-3 text-sm hover:bg-white/5">Clear</button>
+          <button id="nextBtn" class="rounded-xl bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-200">Next Question</button>
+        </div>
+        <p id="result" class="mt-5 hidden rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-slate-300"></p>
+      </section>
+    </div>
+  </main>
+  <script>
+    const questions = [
+      "What is the difference between JDK, JRE, and JVM?",
+      "What is method overloading and method overriding in Java?",
+      "What is the difference between ArrayList and LinkedList?",
+      "What is dependency injection in Spring Boot?",
+      "What is the purpose of @RestController in Spring Boot?"
+    ];
+    let index = 0;
+    const q = document.getElementById("question");
+    const count = document.getElementById("questionCount");
+    const answer = document.getElementById("answer");
+    const result = document.getElementById("result");
+
+    document.getElementById("clearBtn").onclick = () => answer.value = "";
+    document.getElementById("nextBtn").onclick = () => {
+      if (!answer.value.trim()) {
+        result.textContent = "Please enter an answer before continuing.";
+        result.classList.remove("hidden");
+        return;
+      }
+      result.classList.add("hidden");
+      index++;
+      if (index >= questions.length) {
+        q.textContent = "Interview practice completed.";
+        count.textContent = "Completed";
+        answer.value = "";
+        answer.disabled = true;
+        document.getElementById("nextBtn").disabled = true;
+        document.getElementById("nextBtn").classList.add("opacity-40");
+        return;
+      }
+      q.textContent = questions[index];
+      count.textContent = `Question ${index + 1} of ${questions.length}`;
+      answer.value = "";
+    };
+  </script>
+</body>
+</html>
