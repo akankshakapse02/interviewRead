@@ -15,7 +15,7 @@ function setStepState() {
     step.classList.toggle("done", index < completed || progress === 100);
     step.querySelector(".step-status").textContent =
       index < completed || progress === 100 ? "Ready" :
-      index === completed ? "Preparing" : "Waiting";
+        index === completed ? "Preparing" : "Waiting";
   });
 }
 
@@ -29,7 +29,7 @@ function runLoading() {
   setStepState();
 
   timer = setInterval(() => {
-    progress += Math.floor(Math.random() * 8) + 4;
+    progress += Math.floor(Math.random() * 5) + 2;
     if (progress >= 100) progress = 100;
 
     progressBar.style.width = `${progress}%`;
