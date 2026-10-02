@@ -17,3 +17,13 @@
 | TC13 | Enable reduced motion | Animations are minimized |
 | TC14 | Refresh page | Loading sequence starts again |
 | TC15 | Use browser back button | Previous page remains usable |
+
+## Interview Flow Test
+
+| Test | Expected Result | Status |
+|---|---|---|
+| Click Start Interview before loading completes | Button remains disabled | Passed |
+| Click Start Interview after loading reaches 100% | Interview page opens | Passed |
+| Click Next without entering an answer | Validation message appears | Passed |
+| Enter an answer and click Next | Next question appears | Passed |
+| Complete all questions | Completion message appears | Passed |
