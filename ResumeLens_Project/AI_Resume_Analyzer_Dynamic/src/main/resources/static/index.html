@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResumeLens | AI Resume Analyzer</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="logo">R</span><span>Resume<span class="accent">Lens</span></span></a><span class="tag">CAREER TOOLKIT</span></header>
+<main class="container">
+  <section class="hero">
+    <div class="eyebrow"><span class="dot"></span> SMART RESUME REVIEW</div>
+    <h1>Make your resume<br><span class="gradient">work harder for you.</span></h1>
+    <p class="subhead">Upload a PDF, choose a target role, and get practical feedback in seconds.</p>
+  </section>
+  <section class="workspace">
+    <form id="analyzeForm" class="upload-card">
+      <div class="card-heading"><div><span class="step">01</span><h2>Upload your resume</h2></div><span class="pdf-pill">PDF · MAX 5 MB</span></div>
+      <label class="dropzone" for="resume">
+        <span class="upload-icon">↑</span><strong id="fileLabel">Choose a PDF resume</strong>
+        <span>Click to browse files on your device</span>
+        <input id="resume" name="resume" type="file" accept="application/pdf,.pdf" required>
+      </label>
+      <label class="field-label" for="jobTitle">Target job title</label>
+      <input id="jobTitle" name="jobTitle" type="text" placeholder="e.g. Java Developer" required>
+      <button id="submitBtn" type="submit">Analyze my resume <span>→</span></button>
+      <p class="privacy-note">Your file is processed by this local app and is not stored by this starter project.</p>
+      <p id="status" role="status" class="status"></p>
+    </form>
+    <aside class="side-card"><div class="side-icon">✦</div><h3>A clearer next step<br>for your career.</h3><p>Use the feedback to make your resume easier to understand and more relevant to the role.</p><div class="mini-list"><span>✓</span> Skill keyword review</div><div class="mini-list"><span>✓</span> Role-focused suggestions</div><div class="mini-list"><span>✓</span> Simple coverage estimate</div><div class="side-foot">Honest feedback. Your experience, your story.</div></aside>
+  </section>
+  <section id="results" class="results hidden">
+    <div class="results-heading"><div><div class="eyebrow">YOUR REVIEW</div><h2>Resume analysis</h2></div><span id="roleBadge" class="role-badge"></span></div>
+    <div class="score-panel"><div class="score-circle"><div><strong id="score">0</strong><span>/ 100</span></div></div><div><h3>Role skill coverage</h3><p id="disclaimer"></p></div></div>
+    <div class="result-grid"><div class="result-card"><h3>Skills found</h3><div id="matchedSkills" class="chips"></div></div><div class="result-card"><h3>Skills to consider</h3><div id="missingSkills" class="chips"></div></div></div>
+    <div class="result-card suggestions-card"><h3>Suggestions to improve</h3><ul id="suggestions"></ul></div>
+  </section>
+  <footer>ResumeLens · Beginner demo project · Review all suggestions before editing your resume.</footer>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
